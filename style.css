@@ -1,18 +1,26 @@
 body {
     display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #container {
     display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     border: solid red 3px;
 }
 
-.squareStyle {
-    border: solid black 1px;
-    width: 145px;
+.rowStyle {
+    display:flex;
+    flex-direction: column;
+    flex:auto;
+    border:solid blue 1px;
+}
+
+.columnStyle {
+    display:flex;
+    flex-direction: column;
+    flex: auto;
+    border: solid green 1px;
 }
