@@ -2,6 +2,7 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background: whitesmoke;
 }
 
@@ -22,8 +23,4 @@ body {
     display:flex;
     flex-direction: column;
     flex: auto;
-}
-
-.mouseOver {
-    background: blue;
 }
