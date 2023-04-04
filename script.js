@@ -1,8 +1,17 @@
 const button = document.getElementById("button");
-button.addEventListener("click", (event) => {
-    prompt("How many squares do you want? Max of 100");
-});
 
+function functionAsk (){
+    let answer = prompt("Enter the number of squares per side on the etch-a-sketch (range 16-100)");
+    let num = parseInt(answer, 10);
+    
+    if (Number.isNaN(num)){
+        alert("This is not a number")
+    } else if (typeof num === "number" && (num < 100) && (num > 15)) {
+        console.log(num)
+    } else {
+            alert("Please try again.")
+    };
+};
 
 let container = document.querySelector('#container');
 
