@@ -1,8 +1,10 @@
 const button = document.getElementById("button");
+let num = 16;
+
 
 function functionAsk (){
     let answer = prompt("Enter the number of squares per side on the etch-a-sketch (range 16-100)");
-    let num = parseInt(answer, 10);
+    num = parseInt(answer, 10);
     
     if (Number.isNaN(num)){
         alert("This is not a number")
@@ -15,17 +17,21 @@ function functionAsk (){
 
 let container = document.querySelector('#container');
 
-for (i = 0; i < 100; i++){
-    let row = document.createElement('div');
-    row.classList.add('rowStyle');
-    container.appendChild(row);
-    
-    for (j = 0; j < 100; j++){
-        let column = document.createElement('div');
-        column.classList.add('columnStyle');
-        row.appendChild(column);
+function squares() {
+    for (i = 0; i < num; i++){
+        let row = document.createElement('div');
+        row.classList.add('rowStyle');
+        container.appendChild(row);
+        
+        for (j = 0; j < num; j++){
+            let column = document.createElement('div');
+            column.classList.add('columnStyle');
+            row.appendChild(column);
+        };
     };
-};
+}
+
+document.addEventListener("DOMContentLoaded", squares());
 
 const divs = document.getElementsByClassName('columnStyle');
 
