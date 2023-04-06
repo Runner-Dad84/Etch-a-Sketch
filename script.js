@@ -1,6 +1,6 @@
 const button = document.getElementById("button");
 let span = document.getElementById("squareNum");
-span.textContent = "This Etch A Sketch is size 16x16.";
+span.textContent = "16x16";
 let num = 16;
 
 //button input for number of squares//
@@ -12,7 +12,7 @@ function functionAsk (){
         alert("This is not a number")
     } else if (typeof num === "number" && (num < 101) && (num > 15)) {
         num;
-        span.textContent = `This Etch A Sketch is size is ${num}x${num}.`;
+        span.textContent = `${num}x${num}`;
         return squares();
     } else {
             alert("Please try again.")

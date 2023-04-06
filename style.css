@@ -2,15 +2,50 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     background: whitesmoke;
+}
+
+#red {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: red;
+    border-top: solid 20px red;
+    border-bottom: solid 10px red;
+    border-right: solid 10px red;
+    border-left: solid 10px red;
+    border-radius: 12px;
+    width: 780px;
+    height: 830px;
+}
+
+p {
+    font-family: cursive;
+    color: gold;
+    font-size:35px;
+}
+
+.knob {
+    background-color: white;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+#bottom {
+    display: flex;
+    align-items: center;
+    gap: 200px;
 }
 
 #container {
     display: flex;
-    width: 800px;
-    height: 800px;
-    background-color: gray;
+    width: 700px;
+    height: 700px;
+    border: solid black 6px;
+    border-radius: 8px;
+    background-color: lightgrey;
 }
 
 .rowStyle {
@@ -24,3 +59,14 @@ body {
     flex-direction: column;
     flex: auto;
 }
+
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    width: 75px;
+    padding: 30px;
+    gap: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+
+};
