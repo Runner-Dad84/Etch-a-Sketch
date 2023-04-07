@@ -63,7 +63,7 @@ p {
 .sideBar {
     display: flex;
     flex-direction: column;
-    width: 75px;
+    width: 125px;
     padding: 30px;
     gap: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
