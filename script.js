@@ -1,4 +1,3 @@
-const button = document.getElementById("button");
 let span = document.getElementById("squareNum");
 span.textContent = "";
 let num;
@@ -21,7 +20,7 @@ function functionAsk (){
 
 let container = document.querySelector('#container');
 
-//creates number of squares and highlighting tool//
+//resolution//
 function squares() {
     functionReset ();
     for (i = 0; i < num; i++){
@@ -35,14 +34,33 @@ function squares() {
             row.appendChild(column);
         };
     };
-
-    const divs = document.getElementsByClassName('columnStyle');
-    Array.from(divs).forEach(function(e) {
-        e.addEventListener("mouseenter", function() {
-        this.style.background = "black";}
-        );
-    });
+ drawBlack();
 }
+
+function drawBlack (){
+    const divs = document.getElementsByClassName('columnStyle');
+        Array.from(divs).forEach(function(e) {
+            e.addEventListener("mouseenter", function() {
+            this.style.background = "black";}
+            );
+        });
+};
+
+function drawColor (){
+    
+    function randomize (){
+        let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        return randomColor;
+    };
+    
+    const divs = document.getElementsByClassName('columnStyle');
+        Array.from(divs).forEach(function(e) {
+            e.addEventListener("mouseenter", function() {
+            this.style.background = randomize();}
+            );
+        });
+};
+
 
 function functionReset () {
     let get = document.querySelectorAll('.rowStyle');
