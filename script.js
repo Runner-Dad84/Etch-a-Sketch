@@ -34,37 +34,47 @@ function squares() {
             row.appendChild(column);
         };
     };
+ //black ink as default//
  drawBlack();
 }
+let color;
+const divs = document.getElementsByClassName('columnStyle');
 
-function drawBlack (){
-    const divs = document.getElementsByClassName('columnStyle');
+function draw (color){
         Array.from(divs).forEach(function(e) {
             e.addEventListener("mouseenter", function() {
-            this.style.background = "black";}
+            this.style.background = color;}
             );
         });
 };
 
-function drawColor (){
-    
+function rainbow (){
     function randomize (){
         let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
         return randomColor;
     };
-    
-    const divs = document.getElementsByClassName('columnStyle');
-        Array.from(divs).forEach(function(e) {
-            e.addEventListener("mouseenter", function() {
-            this.style.background = randomize();}
-            );
-        });
+    Array.from(divs).forEach(function(e) {
+        e.addEventListener("mouseenter", function() {
+        this.style.background = randomize();}
+        );
+    });
 };
 
+function drawBlack(){
+    return draw ("black");
+}
+
+function drawColor() {
+    return draw (rainbow());
+}
+
+function eraseFunction() {
+   return draw ("lightgray");
+};
 
 function functionReset () {
-    let get = document.querySelectorAll('.rowStyle');
-    get.forEach(div => {div.remove()});
+    let getAll = document.querySelectorAll('.rowStyle');
+    getAll.forEach(div => {div.remove()});
 }
 
 //Call squares function on page load//
