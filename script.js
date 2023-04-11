@@ -37,6 +37,7 @@ function squares() {
  //black ink as default//
  drawBlack();
 }
+
 let color;
 const divs = document.getElementsByClassName('columnStyle');
 
@@ -75,7 +76,16 @@ function eraseFunction() {
 function functionReset () {
     let getAll = document.querySelectorAll('.rowStyle');
     getAll.forEach(div => {div.remove()});
-}
+};
+
+//Toggle border
+
+   const button = document.getElementById("border");
+   const buttonPressed = () => {for (const div of divs){
+    div.classList.toggle("border");};};
+    button.addEventListener("click", buttonPressed);
+
+
 
 //Call squares function on page load//
 document.addEventListener("DOMContentLoaded", squares());

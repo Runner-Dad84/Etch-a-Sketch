@@ -60,6 +60,10 @@ p {
     flex: auto;
 }
 
+.border {
+    border: solid black 0.25px;
+}
+
 .sideBar {
     display: flex;
     flex-direction: column;
