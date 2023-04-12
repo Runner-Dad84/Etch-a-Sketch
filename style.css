@@ -5,6 +5,19 @@ body {
     background: whitesmoke;
 }
 
+button {
+    border: solid red 4pt;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+}
+
+span {
+    font-size: 25px;
+    font-style: bold;
+}
+
 #red {
     display: flex;
     align-items: center;
@@ -64,12 +77,19 @@ p {
     border: solid black 0.25px;
 }
 
+.graph {
+    background-color: lightsalmon;
+}
+
 .sideBar {
     display: flex;
     flex-direction: column;
-    width: 125px;
-    padding: 30px;
-    gap: 20px;
+    width: 150px;
+    padding: 40px;
+    margin: 30px;
+    gap: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
+    background-color: orange;
+    border:solid red 4px;
 };

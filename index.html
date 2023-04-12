@@ -13,13 +13,16 @@
 
 <body>
     <div class="sideBar">
-        <button id="resolution" onclick="functionAsk()">Resolution</button>
-        <span id="squareNum"></span>
-        <button id="black" onclick="drawBlack()">Black</button>
-        <button id="color" onclick="drawColor()">Rainbow</button>
-        <button id="border"">Grid ON/OFF</button>
-        <button id="erase" onclick="eraseFunction()">Eraser</button>
-        <button id="reset" onclick="functionReset()">Reset</button>
+        <h3>Screen Attributes</h3>
+            <span id="squareNum"></span>
+            <button id="resolution" onclick="functionAsk()">Resolution</button>
+            <button id="border">Graph</button>
+        <h3>Cursor Attributes</h3>
+            <button id="black" onclick="drawBlack()">Black</button>
+            <button id="color" onclick="drawColor()">Rainbow</button>
+            <button id="erase" onclick="eraseFunction()">Eraser</button>
+        <h3>Erase</h3>
+            <button id="reset" onclick="functionReset()">Reset</button>
     </div>
     <div id="red">
         <div id="container"></div>

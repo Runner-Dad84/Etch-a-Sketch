@@ -11,7 +11,7 @@ function functionAsk (){
         alert("This is not a number")
     } else if (typeof num === "number" && (num < 101) && (num > 15)) {
         num;
-        span.textContent = `${num} x ${num}`;
+        span.textContent = `  ${num} x ${num}`;
         return squares();
     } else {
             alert("Please try again.")
@@ -61,15 +61,29 @@ function rainbow (){
     });
 };
 
+const blackButton = document.getElementById("black");
+const colorButton = document.getElementById("color");
+const eraseButton = document.getElementById("erase");
+
 function drawBlack(){
+    blackButton.style.background = "lightsalmon";
+    colorButton.style.background = "red";
+    eraseButton.style.background = "red";
     return draw ("black");
+    
 }
 
 function drawColor() {
+    blackButton.style.background = "red";
+    colorButton.style.background = "lightsalmon";
+    eraseButton.style.background = "red";
     return draw (rainbow());
 }
 
 function eraseFunction() {
+    blackButton.style.background = "red";
+    colorButton.style.background = "red";
+    eraseButton.style.background = "lightsalmon";
    return draw ("lightgray");
 };
 
@@ -78,12 +92,18 @@ function functionReset () {
     getAll.forEach(div => {div.remove()});
 };
 
+
 //Toggle border
 
-   const button = document.getElementById("border");
+   const graph = document.getElementById("border");
    const buttonPressed = () => {for (const div of divs){
     div.classList.toggle("border");};};
-    button.addEventListener("click", buttonPressed);
+    graph.addEventListener("click", buttonPressed);
+
+    const buttonPressedTwo = (e) => {
+        e.target.classList.toggle("graph");
+    }
+   graph.addEventListener("click", buttonPressedTwo);
 
 
 
