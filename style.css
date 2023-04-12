@@ -15,7 +15,7 @@ button {
 
 span {
     font-size: 25px;
-    font-style: bold;
+    font-weight: bolder;
 }
 
 #red {
@@ -36,6 +36,7 @@ span {
 p {
     font-family: cursive;
     color: gold;
+    font-weight: bolder;
     font-size:35px;
 }
 
