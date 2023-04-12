@@ -4,12 +4,12 @@ let num;
 
 //button input for number of squares//
 function functionAsk (){
-    let answer = prompt("Enter the number of squares per side on the etch-a-sketch (range 16-100)");
+    let answer = prompt("Enter the number of squares per side on the etch-a-sketch (range 9-100)");
     num = parseInt(answer, 10);
     
     if (Number.isNaN(num)){
         alert("This is not a number")
-    } else if (typeof num === "number" && (num < 101) && (num > 15)) {
+    } else if (typeof num === "number" && (num < 101) && (num > 8)) {
         num;
         span.textContent = `  ${num} x ${num}`;
         return squares();
@@ -93,13 +93,12 @@ function functionReset () {
 };
 
 
-//Toggle border
-
+//Toggle graph
    const graph = document.getElementById("border");
    const buttonPressed = () => {for (const div of divs){
     div.classList.toggle("border");};};
     graph.addEventListener("click", buttonPressed);
-
+//Toggle graph button
     const buttonPressedTwo = (e) => {
         e.target.classList.toggle("graph");
     }

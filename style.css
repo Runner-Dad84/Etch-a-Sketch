@@ -2,7 +2,7 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
-    background: whitesmoke;
+    background: lightyellow;
 }
 
 button {
@@ -30,7 +30,7 @@ span {
     border-left: solid 10px red;
     border-radius: 12px;
     width: 780px;
-    height: 830px;
+    height: 800px;
 }
 
 p {
@@ -84,10 +84,12 @@ p {
 .sideBar {
     display: flex;
     flex-direction: column;
+    height: 800px;
     width: 150px;
-    padding: 40px;
+    padding: 10px;
     margin: 30px;
     gap: 25px;
+    border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
     background-color: orange;
